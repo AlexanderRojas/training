@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="17715" started-at="2018-02-08T10:35:33Z" finished-at="2018-02-08T10:35:51Z">
+  <suite name="Suite" duration-ms="11590" started-at="2018-02-09T18:11:34Z" finished-at="2018-02-09T18:11:45Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="17715" started-at="2018-02-08T10:35:33Z" finished-at="2018-02-08T10:35:51Z">
-      <class name="com.full.tests.tests">
-        <test-method status="PASS" signature="wikipediaSearch()[pri:0, instance:com.full.tests.tests@51081592]" name="wikipediaSearch" duration-ms="17693" started-at="2018-02-08T05:35:33Z" finished-at="2018-02-08T05:35:51Z">
+    <test name="Default test" duration-ms="11590" started-at="2018-02-09T18:11:34Z" finished-at="2018-02-09T18:11:45Z">
+      <class name="com.full.tests.ConnFireFoxSimple">
+        <test-method status="PASS" signature="function()[pri:0, instance:com.full.tests.ConnFireFoxSimple@6d00a15d]" name="function" duration-ms="11571" started-at="2018-02-09T13:11:34Z" finished-at="2018-02-09T13:11:45Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- wikipediaSearch -->
-      </class> <!-- com.full.tests.tests -->
+        </test-method> <!-- function -->
+      </class> <!-- com.full.tests.ConnFireFoxSimple -->
     </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+  </suite> <!-- Suite -->
 </testng-results>

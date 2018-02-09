@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.full.tests.tests">
+      <class name="com.full.tests.LoginTests">
         <methods>
-          <include name="wikipediaSearch"/>
+          <include name="test"/>
         </methods>
-      </class> <!-- com.full.tests.tests -->
+      </class> <!-- com.full.tests.LoginTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,5 +1,7 @@
 package com.full.pages;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -16,7 +18,9 @@ public class HomePage {
 	private static WebElement submitButton;
 
 	public static void go(WebDriver driver){
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		driver.get("https://www.wikipedia.org/");
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		}
 
 	public static void search(String query, String language) {
