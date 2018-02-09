@@ -1,53 +1,46 @@
 package com.full.tests;
+	
 
 import java.util.concurrent.TimeUnit;
 
-//import org.openqa.selenium.By;
-
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
-//import org.testng.annotations.Parameters;
 
 public class LoginTests {
 
-	private static WebDriver driver;
+private static WebDriver driver;
 
-	@Test
+@Test 
 
-	//@Parameters({ "sUsername", "sPassword" })
+@Parameters({ "sUsername", "sPassword" })
 
-	//public void test(String sUsername, String sPassword) {
-	public void test() {
+public void test(String sUsername, String sPassword) {
 
-		FirefoxOptions firefoxOptions = new FirefoxOptions();
-		firefoxOptions.setCapability("marionette", true);
-		driver = new FirefoxDriver(firefoxOptions);
+	FirefoxOptions firefoxOptions = new FirefoxOptions();
+    firefoxOptions.setCapability("marionette", true);
+    
+    driver = new FirefoxDriver(firefoxOptions);
 
-		//driver = new FirefoxDriver();
+  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+  driver.get("http://www.store.demoqa.com");
 
-		driver.get("https://www.google.com.co/");
+  driver.findElement(By.xpath(".//*[@id='account']/a")).click();
 
-		/*
-		
-		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+  driver.findElement(By.id("log")).sendKeys(sUsername);
 
-		driver.findElement(By.xpath(".//*[@id='account']/a")).click();
+  driver.findElement(By.id("pwd")).sendKeys(sPassword);
 
-		driver.findElement(By.id("log")).sendKeys(sUsername);
+  driver.findElement(By.id("login")).click();
 
-		driver.findElement(By.id("pwd")).sendKeys(sPassword);
+  driver.findElement(By.xpath(".//*[@id='account_logout']/a")).click();
 
-		driver.findElement(By.id("login")).click();
+  driver.quit();
 
-		driver.findElement(By.xpath(".//*[@id='account_logout']/a")).click();
-*/
-		//driver.quit();
-
-	}
+}
 
 }
